@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=AR+One+Sans:wght@500&family=Manrope&family=Montserrat:wght@500&family=Poppins:ital,wght@0,400;0,600;1,500&family=Roboto:wght@300&display=swap');
 
 body {
-  font-family: 'Times New Roman', Times, serif, sans-serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body::-webkit-scrollbar {

@@ -28,8 +28,8 @@ const Navbar = ({}) => {
   };
 
   return (
-    <header className="bg-[#f97316] text-black w-full ease-in duration-300 fixed top-0 left-0 z-10">
-      <nav className="max-w-[1080] h-[100px] flex justify-between items-center p-4">
+    <header className="bg-[#f97316] text-black ease-in duration-300 fixed top-0 left-0 z-10 w-[100%]">
+      <nav className="max-w-[1080] h-[100px] flex justify-between items-center p-4 w-[90%]">
         <div>
           <Link href="/">
             <span
@@ -46,28 +46,21 @@ const Navbar = ({}) => {
 
         <ul className="hidden md:flex uppercase font-semibold text-1xl lg:text-[20px] text-slate-800">
           <li className="mr-4 lg:mr-8 hover:text-[#CEFF00]">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="mr-4 lg:mr-8 hover:text-[#CEFF00]">
             <Link href="/tipos">Tipos</Link>
           </li>
           <li className="mr-4 lg:mr-8 hover:text-[#CEFF00]">
             <Link href="/marcas">Marcas</Link>
           </li>
-          <li className="mr-4 lg:mr-8 hover:text-[#CEFF00]">
-            <Link href="/consejos">Consejos</Link>
-          </li>
-          <li className="mr-4 lg:mr-8 hover:text-[#CEFF00]">
-            <Link href="/reseñas">Reseñas</Link>
-          </li>
-          <li className="relative">
-            <button
-              onClick={() => toggleDesktopDropdown('firstDropdown')}
-              className="uppercase mr-4 lg:mr-8 hover:text-[#CEFF00]">
-              Dropdown
+          <li
+            className="relative"
+            onClick={() => toggleDesktopDropdown('firstDropdown')}>
+            <button className="uppercase mr-4 lg:mr-8 hover:text-[#CEFF00]">
+              Dropdown 1
             </button>
             {desktopDropdowns['firstDropdown'] && (
-              <ul className="absolute z-10 mt-2 w-[200px] bg-white text-black rounded-lg shadow-lg">
+              <ul
+                className="absolute z-10 mt-2 w-[200px] bg-white text-black rounded-lg shadow-lg"
+                onMouseLeave={() => setDesktopDropdowns(false)}>
                 <li className="hover:bg-gray-200 px-4 py-2">
                   <Link href="/option1">Option 1</Link>
                 </li>
@@ -87,7 +80,9 @@ const Navbar = ({}) => {
               Dropdown
             </button>
             {desktopDropdowns['secondDropdown'] && (
-              <ul className="absolute z-10 mt-2 w-[200px] bg-white text-black rounded-lg shadow-lg">
+              <ul
+                className="absolute z-10 mt-2 w-[200px] bg-white text-black rounded-lg shadow-lg"
+                onMouseLeave={() => setDesktopDropdowns(false)}>
                 <li className="hover:bg-gray-200 px-4 py-2">
                   <Link href="/option1">Option 1</Link>
                 </li>
@@ -162,7 +157,7 @@ const Navbar = ({}) => {
                 <button
                   onClick={() => toggleMobileDropdown('firstDropdown')}
                   className="hover:text-[#CEFF00] uppercase">
-                  Dropdown
+                  Dropdown 1
                 </button>
                 {mobileDropdowns['firstDropdown'] && (
                   <ul className="mt-2 bg-white text-black rounded-lg shadow-lg w-[80%] mx-auto">

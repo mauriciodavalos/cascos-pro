@@ -6,51 +6,64 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <section className="flex flex-col justify-center items-center min-h-screen bg-black">
-        <div className="absolute inset-0 bg-[url('/vander-films-4ldc6lB9oBw-unsplash.jpg')] bg-cover bg-center opacity-50"></div>
-        <p className="font-bold text-center text-6xl text-white z-0">
-          Tu seguridad es primero
+      <section className="flex flex-col justify-center items-center min-h-screen bg-black ">
+        <div className="absolute inset-0 bg-[url('/vander-films-4ldc6lB9oBw-unsplash.jpg')] bg-cover bg-center opacity-50 w-full"></div>
+        <p className="font-bold text-center text-5xl text-white z-0 mt-[150px]">
+          Tu Seguridad es Primero
         </p>
-        <h1 className="font-bold text-center text-3xl text-white z-0 mt-3">
+        <h1 className="font-bold text-center text-xl text-white z-0 mt-5">
           Cascos para Motos
         </h1>
-        <button className="px-4 py-2 font-semibold text-2xl bg-[#f97316] text-black hover:bg-[#CEFF00] rounded-none cursor-pointer z-0 mt-[5vh]">
-          Comparativa de los mejores Cascos Certificados
+        <button className="px-4 py-2 font-semibold bg-[#f97316] text-black hover:bg-[#CEFF00] rounded-none cursor-pointer z-0 mt-[5vh]">
+          Comparativa de los <br />
+          Mejores Cascos Certificados
         </button>
-        <p className="text-1xl text-white z-0 mt-[5vh] w-[70%] text-center">
+        <p className="text-1xl text-white z-0 mt-[5vh] text-center sm:text-left p-2 lg:w-[40%]">
           Analizamos comentarios, testimonios de usuarios, precios,
-          certificaciones, reputación de las marcas, y otros datos relevantes
+          certificaciones, reputación de las marcas, y otros datos relevantes{' '}
           para que puedas hacer la mejor compra de tu{' '}
           <strong>Casco para Motociclismo</strong>.
         </p>
-        <div className="grid grid-rows-2 grid-cols-4 gap-4 mt-[10vh] z-0 items-center">
-          <div className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            <img src="/imgs/logoAGV.png" alt="Image 1" className="w-[70%]" />
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-[7vh] z-0 items-center mb-2">
+          <div className="w-[6rem] h-[4rem] bg-white flex items-center justify-center">
+            <img src="/imgs/logoAGV.png" alt="Logo AGV" className="w-[70%]" />
           </div>
-          <div className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            <img src="/imgs/shoeilogo.png" alt="Image 2" className="w-[95%]" />
-          </div>
-          <div className="w-[130px] h-[80px] bg-white flex items-center justify-center">
+          <div className="w-[6rem] h-[4rem] bg-white flex items-center justify-center">
             <img
-              src="/imgs/schubertlogo.png"
-              alt="Image 4"
+              src="/imgs/shoeilogo.png"
+              alt="Logo Shoei"
               className="w-[95%]"
             />
           </div>
-          <div className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            <img src="/imgs/arailogo.png" alt="Image 4" className="w-[95%]" />
+          <div className="w-[6rem] h-[4rem] bg-white flex items-center justify-center">
+            <img
+              src="/imgs/schubertlogo.png"
+              alt="Logo Schubert"
+              className="w-[95%]"
+            />
           </div>
-          <div className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            <img src="imgs/nolanlogo.png" alt="Image 3" className="w-[95%]" />
+          <div className="w-[6rem] h-[4rem] bg-white flex items-center justify-center">
+            <img src="/imgs/arailogo.png" alt="Logo Arai" className="w-[95%]" />
           </div>
-          <div className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            <img src="/imgs/sharklogo.png" alt="Image 4" className="w-[80%]" />
+          <div className="w-[6rem] h-[4rem] bg-white flex items-center justify-center">
+            <img
+              src="imgs/nolanlogo.png"
+              alt="Logo Nolan"
+              className="w-[95%]"
+            />
           </div>
-          <div className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            <img src="/imgs/hjclogo.png" alt="Image 4" className="w-[95%]" />
+          <div className="w-[6rem] h-[4rem] bg-white flex items-center justify-center">
+            <img
+              src="/imgs/sharklogo.png"
+              alt="Logo Shark"
+              className="w-[80%]"
+            />
           </div>
-          <div className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            <img src="/imgs/belllogo.png" alt="Image 4" className="w-[95%]" />
+          <div className="w-[6rem] h-[4rem] bg-white flex items-center justify-center">
+            <img src="/imgs/hjclogo.png" alt="Logo HJC" className="w-[95%]" />
+          </div>
+          <div className="w-[6rem] h-[4rem] bg-white flex items-center justify-center">
+            <img src="/imgs/belllogo.png" alt="Logo " className="w-[95%]" />
           </div>
         </div>
       </section>
