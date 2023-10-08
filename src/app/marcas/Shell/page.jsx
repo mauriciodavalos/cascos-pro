@@ -1,19 +1,19 @@
 import { ClusterMarcas } from '@/components/ClusterMarcas';
 import { JsonLdScript } from '@/components/JsonLdScript';
-import { PaginaTSG } from '@/components/PaginaTSG';
+import { PaginaTSGMarcasSinProductos } from '@/components/PaginaTSGMarcasSinProductos';
 
 export const metadata = {
-  title: 'Cascos para moto marca Shell',
-  description: 'Description for shell',
+  title: 'Cascos para Moto Marca Shell | Cascos Pro Moto',
+  description:
+    'Cascos para motociclismo Shell. ✓ Innovación ✓ Durabilidad ✓ Económicos',
 };
 
 const Page = () => {
   const brand = 'Shell';
-  const paragraph =
-    'Esta marca ha dejado de fabricarlos pero te mostramos otros cascos para moto de caracteristicas similares';
+  const paragraph = `Los cascos de Shell son conocidos por su calidad y seguridad. Sin embargo, la marca ha dejado de fabricarlos. Aquí te mostramos otros cascos para moto de características similares.`;
 
-  const title = `Cascos para Moto ${brand}`;
-  const subtitle = `Comprar cascos para moto similares a ${brand}`;
+  const title = `Cascos para Moto ${brand}: alternativas similares`;
+  const subtitle = `Compra un casco de moto seguro y de calidad`;
   const imageUrl = false;
 
   const faq = [
@@ -22,15 +22,7 @@ const Page = () => {
       name: '¿Por qué la marca Shell dejó de fabricar estos cascos?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'La marca dejó de fabricar estos cascos debido a razones X, Y, Z.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: '¿Qué cascos son similares a los de Shell?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Los cascos de las marcas A, B y C son similares en características a los de Shell.',
+        text: 'La marca dejó de fabricar estos cascos debido a razones comerciales.',
       },
     },
   ];
@@ -65,12 +57,14 @@ const Page = () => {
   return (
     <div className="flex flex-col justify-center items-center mx-auto mt-[200px] w-[90%]">
       <JsonLdScript data={jsonLd} />
-      <PaginaTSG
+
+      <PaginaTSGMarcasSinProductos
         title={title}
         paragraph={paragraph}
         subtitle={subtitle}
         imageUrl={imageUrl}
       />
+
       <ClusterMarcas />
     </div>
   );
