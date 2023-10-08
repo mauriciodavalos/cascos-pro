@@ -6,7 +6,7 @@ export const metadata = {
 export default function Home() {
   return (
     <div>
-      <section className="flex flex-col justify-center items-center min-h-screen bg-black ">
+      <section className="relative flex flex-col justify-center items-center min-h-screen bg-black">
         <div className="absolute inset-0 bg-[url('/vander-films-4ldc6lB9oBw-unsplash.jpg')] bg-cover bg-center opacity-50 w-full"></div>
         <p className="font-bold text-center text-5xl text-white z-0 mt-[150px]">
           Tu Seguridad es Primero

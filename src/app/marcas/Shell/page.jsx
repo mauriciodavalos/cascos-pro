@@ -1,14 +1,16 @@
+import { ClusterMarcas } from '@/components/ClusterMarcas';
+import { JsonLdScript } from '@/components/JsonLdScript';
 import { PaginaTSG } from '@/components/PaginaTSG';
 
 export const metadata = {
-  title: 'Marcas',
-  description: 'Description for home',
+  title: 'Cascos para moto marca Shell',
+  description: 'Description for shell',
 };
 
 const Page = () => {
   const brand = 'Shell';
   const paragraph =
-    'Estos cascos para moto han destacado por su capacidad de innovacion en seguridad. Esta marca ha dejado de fabricarlos pero te mostramos otros cascos para moto de caracteristicas similares';
+    'Esta marca ha dejado de fabricarlos pero te mostramos otros cascos para moto de caracteristicas similares';
 
   const title = `Cascos para Moto ${brand}`;
   const subtitle = `Comprar cascos para moto similares a ${brand}`;
@@ -36,9 +38,22 @@ const Page = () => {
   const jsonLd = [
     {
       '@context': 'https://schema.org',
-      '@type': 'Product',
-      name: title,
-      description: paragraph,
+      '@type': 'NewsArticle',
+      headline: 'Title of a News Article',
+      image: [
+        'https://example.com/photos/1x1/photo.jpg',
+        'https://example.com/photos/4x3/photo.jpg',
+        'https://example.com/photos/16x9/photo.jpg',
+      ],
+      datePublished: '2015-02-05T08:00:00+08:00',
+      dateModified: '2015-02-05T09:20:00+08:00',
+      author: [
+        {
+          '@type': 'Person',
+          name: 'Mauricio Dávalos',
+          url: 'https://cascospro-moto.com/#organization',
+        },
+      ],
     },
     {
       '@context': 'https://schema.org',
@@ -48,17 +63,15 @@ const Page = () => {
   ];
 
   return (
-    <div className="mt-[200px]">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+    <div className="flex flex-col justify-center items-center mx-auto mt-[200px] w-[90%]">
+      <JsonLdScript data={jsonLd} />
       <PaginaTSG
         title={title}
         paragraph={paragraph}
         subtitle={subtitle}
         imageUrl={imageUrl}
       />
+      <ClusterMarcas />
     </div>
   );
 };
