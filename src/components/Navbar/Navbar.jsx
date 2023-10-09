@@ -15,14 +15,22 @@ const Navbar = ({}) => {
 
   const toggleDesktopDropdown = (key) => {
     setDesktopDropdowns({
-      ...desktopDropdowns,
+      // Reset other keys
+      ...Object.fromEntries(
+        Object.keys(desktopDropdowns).map((k) => [k, k === key])
+      ),
+      // Toggle the clicked one
       [key]: !desktopDropdowns[key],
     });
   };
 
   const toggleMobileDropdown = (key) => {
     setMobileDropdowns({
-      ...mobileDropdowns,
+      // Reset other keys
+      ...Object.fromEntries(
+        Object.keys(mobileDropdowns).map((k) => [k, k === key])
+      ),
+      // Toggle the clicked one
       [key]: !mobileDropdowns[key],
     });
   };
