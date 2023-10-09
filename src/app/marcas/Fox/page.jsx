@@ -1,4 +1,5 @@
 import { ClusterMarcas } from '@/components/ClusterMarcas';
+import { FaqAccordion } from '@/components/FaqAccordion';
 import { JsonLdScript } from '@/components/JsonLdScript';
 
 export const metadata = {
@@ -118,10 +119,18 @@ const Page = () => {
   const faq = [
     {
       '@type': 'Question',
-      name: '¿Por qué la marca Shell dejó de fabricar estos cascos?',
+      name: '¿Por qué la marca Fox es tan reconocida en los cascos?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'La marca dejó de fabricar estos cascos debido a razones comerciales.',
+        text: 'La marca tiene unos diseños increibles.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Por qué la marca Fox es tan reconocida en los cascos?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'La marca tiene unos diseños increibles.',
       },
     },
   ];
@@ -130,14 +139,14 @@ const Page = () => {
     {
       '@context': 'https://schema.org',
       '@type': 'NewsArticle',
-      headline: 'Title of a News Article',
+      headline: title,
       image: [
-        'https://example.com/photos/1x1/photo.jpg',
-        'https://example.com/photos/4x3/photo.jpg',
-        'https://example.com/photos/16x9/photo.jpg',
+        'https://www.foxracing.com.mx/cdn/shop/files/29657-002_1800x1800.jpg?v=1693537351',
+        'https://www.foxracing.com.mx/cdn/shop/files/28033-110_1800x1800.jpg?v=1690935396',
+        'https://www.foxracing.com.mx/cdn/shop/files/30874-018_1800x1800.jpg?v=1696227638',
       ],
-      datePublished: '2015-02-05T08:00:00+08:00',
-      dateModified: '2015-02-05T09:20:00+08:00',
+      datePublished: Date.now(),
+      dateModified: Date.now(),
       author: [
         {
           '@type': 'Person',
@@ -161,7 +170,7 @@ const Page = () => {
         <p>{paragraph1}</p>
         <p>{paragraph2}</p>
       </div>
-      <h1 className="font-bold text-3xl mt-5">
+      <h1 className="font-bold text-3xl mt-5 text-center">
         Analisis de los Top Mejores Modelos de Cascos {brand}
       </h1>
       <h3 className="font-bold text-2xl mt-5">Comparación Rápida</h3>
@@ -198,11 +207,17 @@ const Page = () => {
           <p className="text-lg mt-2 text-center">{helmet.description}</p>
           <ul className="list-disc list-inside mt-2 text-lg ml-4">
             {helmet.features.map((feature, fIdx) => (
-              <li key={fIdx}>{feature}</li>
+              <li key={fIdx}>
+                <strong>{feature.split(':')[0]}</strong>
+                {`: ${feature.split(':')[1]}`}
+              </li>
             ))}
           </ul>
         </div>
       ))}
+      <div>
+        <FaqAccordion faqData={faq} />
+      </div>
     </div>
   );
 };

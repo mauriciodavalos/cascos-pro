@@ -10,7 +10,7 @@ export const metadata = {
 
 const Page = () => {
   const brand = 'Shell';
-  const paragraph = `Los cascos de Shell son conocidos por su calidad y seguridad. Sin embargo, la marca ha dejado de fabricarlos. Aquí te mostramos otros cascos para moto de características similares.`;
+  const paragraph = `Si llegaste aquí buscando “cascos para moto Shell”, queremos aclararte algo importante: Shell no es una marca de cascos de moto. Más bien, el término "shell" en inglés, que se traduce como "carcasa" o "cáscara" en español, se refiere comúnmente a la estructura externa de los cascos, la cual brinda la protección crucial durante un impacto.`;
 
   const title = `Cascos para Moto ${brand}: alternativas similares`;
   const subtitle = `Compra un casco de moto seguro y de calidad`;
@@ -19,10 +19,10 @@ const Page = () => {
   const faq = [
     {
       '@type': 'Question',
-      name: '¿Por qué la marca Shell dejó de fabricar estos cascos?',
+      name: '¿Qué es el “Shell” de un Casco de Moto?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'La marca dejó de fabricar estos cascos debido a razones comerciales.',
+        text: '🔍 Shell: Es el armazón exterior del casco, diseñado para dispersar la fuerza del impacto y proteger tu cabeza en caso de un accidente. Los shells pueden ser fabricados con varios materiales, como policarbonato, fibra de vidrio, fibra de carbono, entre otros, cada uno con sus propias características y beneficios en términos de seguridad, peso y confort.',
       },
     },
   ];
