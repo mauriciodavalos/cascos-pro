@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const ClusterMarcas = ({}) => {
   return (
-    <div>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-[7vh] z-0 items-center mb-2">
+    <div className="flex mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-[7vh] z-0 mb-2">
         <div className="w-[10rem] h-[4rem] bg-white flex flex-col items-center justify-center p-2">
           <img src="/imgs/logoAGV.png" alt="Logo AGV" className="w-[70%]" />
         </div>

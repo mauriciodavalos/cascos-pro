@@ -53,41 +53,75 @@ const Navbar = ({}) => {
         {/* larger screens navigation */}
 
         <ul className="hidden md:flex uppercase font-semibold text-1xl lg:text-[20px] text-slate-800">
-          <li className="mr-4 lg:mr-8 hover:text-[#CEFF00]">
-            <Link href="/tipos">Tipos</Link>
+          <li
+            className="relative"
+            onClick={() => toggleDesktopDropdown('tipos')}>
+            <button className="uppercase mr-4 lg:mr-8 hover:text-[#CEFF00]">
+              Tipos
+            </button>
+            {desktopDropdowns['tipos'] && (
+              <ul
+                className="absolute z-10 mt-2 w-[400px] bg-white text-black rounded-lg shadow-lg"
+                onMouseLeave={() => setDesktopDropdowns(false)}>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/tipos/Integrales">Integrales (Cerrados)</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/tipos/Abatibles">Abatibles (Modulares)</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/tipos/Motocross">Motocross (Off-Road)</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/tipos/Jet">Jet (Abiertos 3/4)</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/tipos/Chopper">Chooper</Link>
+                </li>
+              </ul>
+            )}
           </li>
-          <li className="mr-4 lg:mr-8 hover:text-[#CEFF00]">
-            <Link href="/marcas">Marcas</Link>
+          <li
+            className="relative"
+            onClick={() => toggleDesktopDropdown('marcas')}>
+            <button className="uppercase mr-4 lg:mr-8 hover:text-[#CEFF00]">
+              marcas
+            </button>
+            {desktopDropdowns['marcas'] && (
+              <ul
+                className="absolute z-10 mt-2 w-[200px] bg-white text-black rounded-lg shadow-lg"
+                onMouseLeave={() => setDesktopDropdowns(false)}>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/marcas/AGV">AGV</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/marcas/Shoei">Shoei</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/marcas/fox">Fox</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/marcas/kov">Kov</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/marcas/Nolan">Nolan</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/marcas/Shark">Shark</Link>
+                </li>
+                <li className="hover:bg-gray-200 px-4 py-2">
+                  <Link href="/marcas/HJC">HJC</Link>
+                </li>
+              </ul>
+            )}
           </li>
           <li
             className="relative"
             onClick={() => toggleDesktopDropdown('firstDropdown')}>
             <button className="uppercase mr-4 lg:mr-8 hover:text-[#CEFF00]">
-              Dropdown 1
+              Consejos
             </button>
             {desktopDropdowns['firstDropdown'] && (
-              <ul
-                className="absolute z-10 mt-2 w-[200px] bg-white text-black rounded-lg shadow-lg"
-                onMouseLeave={() => setDesktopDropdowns(false)}>
-                <li className="hover:bg-gray-200 px-4 py-2">
-                  <Link href="/option1">Option 1</Link>
-                </li>
-                <li className="hover:bg-gray-200 px-4 py-2">
-                  <Link href="/option2">Option 2</Link>
-                </li>
-                <li className="hover:bg-gray-200 px-4 py-2">
-                  <Link href="/option3">Option 3</Link>
-                </li>
-              </ul>
-            )}
-          </li>
-          <li className="relative">
-            <button
-              onClick={() => toggleDesktopDropdown('secondDropdown')}
-              className="uppercase mr-4 lg:mr-8 hover:text-[#CEFF00]">
-              Dropdown
-            </button>
-            {desktopDropdowns['secondDropdown'] && (
               <ul
                 className="absolute z-10 mt-2 w-[200px] bg-white text-black rounded-lg shadow-lg"
                 onMouseLeave={() => setDesktopDropdowns(false)}>
@@ -141,69 +175,142 @@ const Navbar = ({}) => {
           {/* Smaller screens - Navbar link */}
           <div className="w-full">
             <ul className="uppercase font-bold text-2xl">
-              <li
-                onClick={handleSmallerScreensNavigation}
-                className="py-5 hover:text-[#CEFF00] cursor-pointer">
-                <Link href="/tipos">Tipos</Link>
-              </li>
-              <li
-                onClick={handleSmallerScreensNavigation}
-                className="py-5 hover:text-[#CEFF00] cursor-pointer">
-                <Link href="/marcas">Marcas</Link>
-              </li>
-              <li
-                onClick={handleSmallerScreensNavigation}
-                className="py-5 hover:text-[#CEFF00] cursor-pointer">
-                <Link href="/consejos">Consejos</Link>
-              </li>
-              <li
-                onClick={handleSmallerScreensNavigation}
-                className="py-5 hover:text-[#CEFF00] cursor-pointer">
-                <Link href="/reseñas">Reseñas</Link>
-              </li>
               <li className="relative py-5 cursor-pointer">
                 <button
-                  onClick={() => toggleMobileDropdown('firstDropdown')}
+                  onClick={() => toggleMobileDropdown('marcas')}
                   className="hover:text-[#CEFF00] uppercase">
-                  Dropdown 1
+                  marcas
                 </button>
-                {mobileDropdowns['firstDropdown'] && (
+                {mobileDropdowns['marcas'] && (
                   <ul className="mt-2 bg-white text-black rounded-lg shadow-lg w-[80%] mx-auto">
                     <li
-                      onClick={handleSmallerScreensNavigation}
-                      className="hover:bg-gray-200 px-4 py-2">
-                      <Link href="/mobileOption1">Mobile Option 1</Link>
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/marcas/AGV">AGV</Link>
                     </li>
-                    <li className="hover:bg-gray-200 px-4 py-2">
-                      <Link href="/mobileOption2">Mobile Option 2</Link>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/marcas/Shoei">Shoei</Link>
                     </li>
-                    <li className="hover:bg-gray-200 px-4 py-2">
-                      <Link href="/mobileOption3">Mobile Option 3</Link>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/marcas/fox">Fox</Link>
+                    </li>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/marcas/kov">Kov</Link>
+                    </li>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/marcas/Nolan">Nolan</Link>
+                    </li>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/marcas/Shark">Shark</Link>
+                    </li>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/marcas/HJC">HJC</Link>
                     </li>
                   </ul>
                 )}
               </li>
               <li className="relative py-5 cursor-pointer">
                 <button
-                  onClick={() => toggleMobileDropdown('secondDropdown')}
+                  onClick={() => toggleMobileDropdown('tipos')}
                   className="hover:text-[#CEFF00] uppercase">
-                  Second Dropdown
+                  Tipos
                 </button>
-                {mobileDropdowns['secondDropdown'] && (
+                {mobileDropdowns['tipos'] && (
                   <ul className="mt-2 bg-white text-black rounded-lg shadow-lg w-[80%] mx-auto">
                     <li
-                      onClick={handleSmallerScreensNavigation}
-                      className="hover:bg-gray-200 px-4 py-2">
-                      <Link href="/mobileOption1">Mobile Option 1</Link>
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/tipos/Integrales">
+                        Integrales (Cerrados)
+                      </Link>
                     </li>
-                    <li className="hover:bg-gray-200 px-4 py-2">
-                      <Link href="/mobileOption2">Mobile Option 2</Link>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/tipos/Abatibles">Abatibles (Modulares)</Link>
                     </li>
-                    <li className="hover:bg-gray-200 px-4 py-2">
-                      <Link href="/mobileOption3">Mobile Option 3</Link>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/tipos/Motocross">Motocross (Off-Road)</Link>
+                    </li>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/tipos/Jet">Jet (Abiertos 3/4)</Link>
+                    </li>
+                    <li
+                      className="hover:bg-gray-200 px-4 py-2"
+                      onClick={
+                        menuIcon === true
+                          ? handleSmallerScreensNavigation
+                          : null
+                      }>
+                      <Link href="/tipos/Chopper">Chooper</Link>
                     </li>
                   </ul>
                 )}
+              </li>
+              <li
+                onClick={handleSmallerScreensNavigation}
+                className="py-5 hover:text-[#CEFF00] cursor-pointer">
+                <Link href="/reseñas">Consejos</Link>
               </li>
             </ul>
 

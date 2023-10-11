@@ -15,7 +15,7 @@ const FaqAccordion = ({ faqData }) => {
   };
 
   return (
-    <div className="bg-gray-50 p-6 rounded-md">
+    <div className="bg-gray-50 p-6 rounded-md w-full">
       <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
       {faqData.map((item, index) => (
         <div key={index} className="bg-white p-4 rounded-md my-2 shadow">

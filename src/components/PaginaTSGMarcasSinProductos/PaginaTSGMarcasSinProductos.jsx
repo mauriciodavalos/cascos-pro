@@ -8,8 +8,8 @@ const PaginaTSGMarcasSinProductos = ({
   imageUrl,
 }) => {
   return (
-    <div>
-      <h1 className="font-bold text-center text-5xl">{title}</h1>
+    <div className="mx-auto w-[80%] mt-[110px]">
+      <h1 className="font-bold text-center text-5xl ">{title}</h1>
 
       <p className="text-1xl z-0 mt-5 text-lg sm:text-left p-2 lg:w-[40%]">
         {paragraph}

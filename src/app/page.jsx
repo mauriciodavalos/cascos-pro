@@ -1,3 +1,5 @@
+import { TopCascos } from '@/components/TopCascos';
+
 export const metadata = {
   title: 'Cascos Pro',
   description: 'Certificados para Motociclismo',
@@ -18,7 +20,7 @@ export default function Home() {
           Comparativa de los <br />
           Mejores Cascos Certificados
         </button>
-        <p className="text-1xl text-white z-0 mt-[5vh] text-center sm:text-left p-2 lg:w-[40%]">
+        <p className="text-1xl text-white z-0 mt-[5vh] ml-5 text-center sm:text-left p-2 lg:w-[40%]">
           Analizamos comentarios, testimonios de usuarios, precios,
           certificaciones, reputación de las marcas, y otros datos relevantes{' '}
           para que puedas hacer la mejor compra de tu{' '}
@@ -68,51 +70,66 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col justify-center items-center">
-        <h2 className="font-bold text-center text-5xl z-0 mt-4 w-[90%]">
-          Los mejores Cascos para Moto
-        </h2>
-        <p className="font-bold text-1x z-0 mt-[5vh] w-[80%] justify-center">
-          Descubre los cascos de moto más destacados del mercado, desde modelos
-          económicos hasta opciones de gama alta.
-        </p>
-        <p className="font-bold text-1x z-0 mt-2 w-[80%] justify-center">
-          Exploramos las mejores marcas y te guiaremos hacia la mejor eleccion,
-          siempre destacando aquellos cascos para moto que cuentan con
-          certificados de seguridad para garantizar tu protección en cada ruta.
-        </p>
-        <p className="text-1x z-0 mt-5 w-[80%] justify-center">
-          Haz click en las siguientes imagenes para conocer mas sobre cada uno
-          de los tipos de Cascos de Motociclismo
-        </p>
-        <p className="font-bold text-center text-4xl z-0 mt-4 w-[90%]">
-          Tipos de Cascos para Motoristas
-        </p>
-        <div className="grid grid-rows-2 grid-cols-2 gap-4 mt-2 z-0 items-center">
-          <h3 className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            Cascos Integrales o Cerrados
+        <div className="w-[80%] lg:w-[50%]">
+          <p className="font-bold text-lg z-0 mt-2 justify-center">
+            Exploramos las mejores marcas y te guiaremos hacia la mejor
+            eleccion, siempre destacando aquellos cascos para moto que cuentan
+            con certificados de seguridad para garantizar tu protección en cada
+            ruta.
+          </p>
+
+          <p className="font-bold text-center text-5xl z-0 mt-10">
+            Tipos de Cascos para Motociclismo
+          </p>
+          <p className="text-1x z-0 mt-5">
+            Haz click en las siguientes imagenes para conocer mas sobre cada uno
+            de los tipos de Cascos para Motoristas:
+          </p>
+        </div>
+        <div className="grid grid-cols-2 mt-2 z-0 mx-auto">
+          <h3 className="bg-white items-center justify-center">
+            <div className="w-[250px] h-[200px]">
+              <img
+                src=" https://dainese-cdn.thron.com/delivery/public/image/dainese/fc82b207-571c-48d2-a3b7-6c885a264b69/ramfdh/std/1230x1230/pista-gp-rr-e2206-dot-mono-matt-carbon.jpg?format=auto"
+                alt="Cascos Integrales"
+              />
+            </div>
+            Cascos Integrales
           </h3>
-          <h3 className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            Cascos Abatibles o Modulares
+          <h3 className="bg-white items-center justify-center">
+            <div className="w-[250px] h-[200px]">
+              <img
+                src="https://dainese-cdn.thron.com/delivery/public/image/dainese/477fefeb-e8db-443d-a7ac-2a8ffa0ed55e/ramfdh/std/615x615/tourmodular-ece2206-mono-matt-black.jpg?format=auto"
+                alt="Cascos Abatibles"
+              />
+            </div>
+            Cascos Abatibles
           </h3>
-          <h3 className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            Cascos Jet o Abiertos
+          <h3 className="bg-white items-center justify-centerw-[300px] h-[300px]">
+            <div className="w-[250px] h-[200px]">
+              <img
+                src="https://dainese-cdn.thron.com/delivery/public/image/dainese/9ab8de40-32aa-4e2d-8730-bfcf6d8605c4/ramfdh/std/615x615/x70-multi-e2205-mino-73-white-red.jpg?format=auto"
+                alt="Cascos Jet"
+              />
+            </div>
+            Cascos Jet (Abierto 3/4)
           </h3>
-          <h3 className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            Cascos para Motocross y Off-Road
-          </h3>
-          <h3 className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            Cascos Dual-Sports
-          </h3>
-          <h3 className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            Cascos Vintage
-          </h3>
-          <h3 className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            Cascos de Moto para Mujer
-          </h3>
-          <h3 className="w-[130px] h-[80px] bg-white flex items-center justify-center">
-            Cascos infantiles
+          <h3 className="bg-white items-center justify-center">
+            <div className="w-[200px] h-[200px]">
+              <img
+                src="https://www.foxracing.com.mx/cdn/shop/files/30874-018_1800x1800.jpg?v=1696227638"
+                alt="Cascos Jet"
+              />
+            </div>
+            Cascos Motocross
           </h3>
         </div>
+      </section>
+      <section>
+        <h2 className="font-bold text-center text-5xl z-0 mt-4">
+          Los mejores Cascos para Moto del 2023
+        </h2>
+        <TopCascos />
       </section>
       {/*  */}
       <br></br> <br></br> <br></br>
