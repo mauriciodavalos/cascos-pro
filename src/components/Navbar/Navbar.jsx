@@ -98,7 +98,7 @@ const Navbar = ({}) => {
                   <Link href="/marcas/Shoei">Shoei</Link>
                 </li>
                 <li className="hover:bg-gray-200 px-4 py-2">
-                  <Link href="/marcas/fox">Fox</Link>
+                  <Link href="/marcas/Fox">Fox</Link>
                 </li>
                 <li className="hover:bg-gray-200 px-4 py-2">
                   <Link href="/marcas/kov">Kov</Link>
@@ -208,7 +208,7 @@ const Navbar = ({}) => {
                           ? handleSmallerScreensNavigation
                           : null
                       }>
-                      <Link href="/marcas/fox">Fox</Link>
+                      <Link href="/marcas/Fox">Fox</Link>
                     </li>
                     <li
                       className="hover:bg-gray-200 px-4 py-2"

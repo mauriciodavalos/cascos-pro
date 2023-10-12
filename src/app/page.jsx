@@ -22,10 +22,9 @@ export default function Home() {
               Mejores Cascos Certificados
             </button>
             <p className="text-1xl text-white z-0 mt-5 text-center p-2 lg:w-[40%] mx-auto">
-              Analizamos comentarios, testimonios de usuarios, precios,
-              certificaciones, reputación de las marcas, y otros datos
-              relevantes para que puedas hacer la mejor compra de tu{' '}
-              <strong>Casco para Motociclismo</strong>.
+              Analizamos comentarios, precios, certificaciones, reputación de
+              las marcas, y otros datos relevantes para que puedas hacer la
+              mejor compra de tu <strong>Casco para Motociclismo</strong>.
             </p>
             <div className="flex">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-[7vh] items-center mb-3 mx-auto">
@@ -92,17 +91,16 @@ export default function Home() {
       </section>
       <section className="grid">
         <div>
-          <p className="font-bold text-lg mt-2 lg:text-justify lg:w-[80%] mx-auto">
-            Exploramos las mejores marcas y te guiaremos hacia la mejor
-            eleccion, siempre destacando aquellos cascos para moto que cuentan
-            con certificados de seguridad para garantizar tu protección en cada
-            ruta.
+          <p className="font-bold text-lg mt-2 text-justify lg:w-[80%] mr-2 ml-2 lg:mx-auto">
+            Te guiaremos hacia la mejor eleccion, siempre destacando aquellos
+            cascos para moto que cuentan con certificados de seguridad para
+            garantizar tu protección en cada ruta.
           </p>
 
-          <p className="font-bold text-center text-5xl mt-5">
+          <h3 className="font-bold text-center text-5xl mt-10">
             Tipos de Cascos para Motociclismo
-          </p>
-          <p className="text-left mt-3 lg:w-[50%] mx-auto">
+          </h3>
+          <p className="text-left mt-3 lg:w-[50%] mr-2 ml-2 lg:mx-auto">
             Haz click en las siguientes imagenes para conocer mas sobre cada uno
             de los tipos de Cascos para Motoristas:
           </p>
@@ -112,9 +110,9 @@ export default function Home() {
                 <img
                   src="/imgs/pista-gp-rr-e2206-dot-mono-iridium-carbon.webp"
                   alt="Cascos Integrales"
-                  class="w-[150px] h-[150px] object-cover"
+                  className="w-[150px] h-[150px] object-cover cursor-pointer"
                 />
-                <h3 className="bg-white items-center justify-center">
+                <h3 className="bg-white items-center justify-center cursor-pointer">
                   Cascos Integrales
                 </h3>
               </div>
@@ -122,9 +120,9 @@ export default function Home() {
                 <img
                   src="/imgs/sportmodular-agv-e05-multi-mplk-overlay-matt-double-grey.webp"
                   alt="Cascos Abatibles"
-                  class="w-[150px] h-[150px] object-cover"
+                  className="w-[150px] h-[150px] object-cover cursor-pointer"
                 />
-                <h3 className="bg-white items-center justify-center">
+                <h3 className="bg-white items-center justify-center cursor-pointer">
                   Cascos Abatibles
                 </h3>
               </div>
@@ -132,9 +130,9 @@ export default function Home() {
                 <img
                   src="/imgs/x70-multi-e2205-mino-73-white-red.webp"
                   alt="Cascos Jet"
-                  class="w-[150px] h-[150px] object-cover"
+                  className="w-[150px] h-[150px] object-cover cursor-pointer"
                 />
-                <h3 className="bg-white items-center justify-center">
+                <h3 className="bg-white items-center justify-center cursor-pointer">
                   Cascos Jet (Abierto 3/4)
                 </h3>
               </div>
@@ -142,15 +140,21 @@ export default function Home() {
                 <img
                   src="/imgs/Motocross.webp"
                   alt="Cascos Jet"
-                  class="w-[150px] h-[150px] object-cover"
+                  className="w-[150px] h-[150px] object-cover cursor-pointer"
                 />
-                <h3 className="bg-white items-center justify-center">
+                <h3 className="bg-white items-center justify-center cursor-pointer">
                   Cascos Motocross
                 </h3>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <h3 className="font-bold text-center text-5xl mt-10">
+          Top Mejores de Cascos del 2023
+        </h3>
+        <TopCascos />
       </section>
     </>
   );
