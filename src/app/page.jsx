@@ -108,7 +108,7 @@ export default function Home() {
             <div className="grid grid-cols-2 gap-4 mt-[7vh] items-center mb-3 mx-auto">
               <div>
                 <img
-                  src="/imgs/pista-gp-rr-e2206-dot-mono-iridium-carbon.webp"
+                  src="/imgs/integralCasco.webp"
                   alt="Cascos Integrales"
                   className="w-[150px] h-[150px] object-cover cursor-pointer"
                 />
