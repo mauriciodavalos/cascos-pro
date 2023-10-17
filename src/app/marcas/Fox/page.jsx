@@ -15,7 +15,6 @@ const Page = () => {
   const paragraph2 = `Su especialización en deportes extremos les permite crear cascos que cumplen con los rigurosos estándares de los deportistas más audaces.`;
 
   const title = `Cascos para Motocross ${brand}`;
-  const subtitle = `Descubre la variedad de modelos de cascos para motocross Fox`;
 
   const helmetsData = [
     {
@@ -64,12 +63,6 @@ const Page = () => {
       ],
     },
   ];
-  const imageUrl1 =
-    'https://www.foxracing.com.mx/cdn/shop/files/29657-002_1800x1800.jpg?v=1693537351';
-  const imageUrl2 =
-    'https://www.foxracing.com.mx/cdn/shop/files/28033-110_1800x1800.jpg?v=1690935396';
-  const imageUrl3 =
-    'https://www.foxracing.com.mx/cdn/shop/files/30874-018_1800x1800.jpg?v=1696227638';
 
   const similitudesLista = [
     'Equipados con el sistema MIPS®.',

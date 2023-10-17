@@ -17,9 +17,8 @@ export default function Home() {
             <h1 className="font-bold text-center text-xl text-white z-0 mt-5">
               Cascos para Motos
             </h1>
-            <button className="px-4 py-2 font-semibold bg-[#f97316] text-black hover:bg-[#CEFF00] rounded-none cursor-pointer z-0 mt-[5vh] flex mx-auto">
-              Comparativa de los <br />
-              Mejores Cascos Certificados
+            <button className="px-4 py-4 font-semibold bg-[#f97316] text-black hover:bg-[#CEFF00] rounded-none cursor-pointer z-0 mt-[5vh] flex mx-auto">
+              Top Mejores Cascos del 2023
             </button>
             <p className="text-1xl text-white z-0 mt-5 text-center p-2 lg:w-[40%] mx-auto">
               Analizamos comentarios, precios, certificaciones, reputación de
@@ -91,7 +90,7 @@ export default function Home() {
       </section>
       <section className="grid">
         <div>
-          <p className="font-bold text-lg mt-2 text-justify lg:w-[80%] mr-2 ml-2 lg:mx-auto">
+          <p className="font-bold text-md mt-2 text-justify lg:w-[60%] mr-2 ml-2 lg:mx-auto">
             Te guiaremos hacia la mejor eleccion, siempre destacando aquellos
             cascos para moto que cuentan con certificados de seguridad para
             garantizar tu protección en cada ruta.
@@ -100,52 +99,60 @@ export default function Home() {
           <h3 className="font-bold text-center text-5xl mt-10">
             Tipos de Cascos para Motociclismo
           </h3>
-          <p className="text-left mt-3 lg:w-[50%] mr-2 ml-2 lg:mx-auto">
+          <p className="text-left mt-3 lg:w-[40%] mr-2 ml-2 lg:mx-auto">
             Haz click en las siguientes imagenes para conocer mas sobre cada uno
             de los tipos de Cascos para Motoristas:
           </p>
           <div className="flex">
-            <div className="grid grid-cols-2 gap-4 mt-[7vh] items-center mb-3 mx-auto">
-              <div>
-                <img
-                  src="/imgs/integralCasco.webp"
-                  alt="Cascos Integrales"
-                  className="w-[150px] h-[150px] object-cover cursor-pointer"
-                />
-                <h3 className="bg-white items-center justify-center cursor-pointer">
-                  Cascos Integrales
-                </h3>
-              </div>
-              <div>
-                <img
-                  src="/imgs/sportmodular-agv-e05-multi-mplk-overlay-matt-double-grey.webp"
-                  alt="Cascos Abatibles"
-                  className="w-[150px] h-[150px] object-cover cursor-pointer"
-                />
-                <h3 className="bg-white items-center justify-center cursor-pointer">
-                  Cascos Abatibles
-                </h3>
-              </div>
-              <div>
-                <img
-                  src="/imgs/x70-multi-e2205-mino-73-white-red.webp"
-                  alt="Cascos Jet"
-                  className="w-[150px] h-[150px] object-cover cursor-pointer"
-                />
-                <h3 className="bg-white items-center justify-center cursor-pointer">
-                  Cascos Jet (Abierto 3/4)
-                </h3>
-              </div>
-              <div>
-                <img
-                  src="/imgs/Motocross.webp"
-                  alt="Cascos Jet"
-                  className="w-[150px] h-[150px] object-cover cursor-pointer"
-                />
-                <h3 className="bg-white items-center justify-center cursor-pointer">
-                  Cascos Motocross
-                </h3>
-              </div>
+            <div className="lg:flex sm:grid gap-x-10 mt-5 mb-3 mx-auto">
+              <a href="/tipos/Integrales">
+                <div>
+                  <img
+                    src="/imgs/integralCasco.webp"
+                    alt="Cascos Integrales"
+                    className="w-[150px] h-[150px] object-cover cursor-pointer"
+                  />
+                  <h3 className="bg-white text-center cursor-pointer">
+                    Cascos Integrales
+                  </h3>
+                </div>
+              </a>
+              <a href="/tipos/Abatibles">
+                <div>
+                  <img
+                    src="/imgs/sportmodular-agv-e05-multi-mplk-overlay-matt-double-grey.webp"
+                    alt="Cascos Abatibles"
+                    className="w-[150px] h-[150px] object-cover cursor-pointer"
+                  />
+                  <h3 className="bg-white text-center cursor-pointer">
+                    Cascos Abatibles
+                  </h3>
+                </div>
+              </a>
+              <a href="/tipos/Jet">
+                <div>
+                  <img
+                    src="/imgs/x70-multi-e2205-mino-73-white-red.webp"
+                    alt="Cascos Jet"
+                    className="w-[150px] h-[150px] object-cover cursor-pointer"
+                  />
+                  <h3 className="bg-white text-center cursor-pointer">
+                    Cascos Jet (Abierto 3/4)
+                  </h3>
+                </div>
+              </a>
+              <a href="/tipos/Motocross">
+                <div>
+                  <img
+                    src="/imgs/Motocross.webp"
+                    alt="Cascos Jet"
+                    className="w-[150px] h-[150px] object-cover cursor-pointer"
+                  />
+                  <h3 className="bg-white text-center cursor-pointer">
+                    Cascos Motocross
+                  </h3>
+                </div>
+              </a>
             </div>
           </div>
         </div>

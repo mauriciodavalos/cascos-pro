@@ -101,9 +101,6 @@ const Navbar = ({}) => {
                   <Link href="/marcas/Fox">Fox</Link>
                 </li>
                 <li className="hover:bg-gray-200 px-4 py-2">
-                  <Link href="/marcas/kov">Kov</Link>
-                </li>
-                <li className="hover:bg-gray-200 px-4 py-2">
                   <Link href="/marcas/Nolan">Nolan</Link>
                 </li>
                 <li className="hover:bg-gray-200 px-4 py-2">
@@ -217,7 +214,7 @@ const Navbar = ({}) => {
                           ? handleSmallerScreensNavigation
                           : null
                       }>
-                      <Link href="/marcas/kov">Kov</Link>
+                      <Link href="/marcas/LS2">LS2</Link>
                     </li>
                     <li
                       className="hover:bg-gray-200 px-4 py-2"
@@ -244,7 +241,7 @@ const Navbar = ({}) => {
                           ? handleSmallerScreensNavigation
                           : null
                       }>
-                      <Link href="/marcas/HJC">HJC</Link>
+                      <Link href="/marcas/Arai">Arai</Link>
                     </li>
                   </ul>
                 )}

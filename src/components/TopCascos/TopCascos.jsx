@@ -66,20 +66,24 @@ const TopCascos = ({}) => {
     <div className="container mx-auto p-4 ">
       <ul>
         {helmets.map((helmet, index) => (
-          <li key={index} className="border p-4 mb-4">
-            <h2 className="text-xl font-semibold">{helmet.name}</h2>
-            <h3 className="text-lg mt-2">Características Principales:</h3>
-            <ul className="list-disc list-inside">
+          <li key={index} className="border mt-5 lg:w-[50%] mx-auto">
+            <h2 className="font-semibold text-2xl text-center mt-4 ">
+              {helmet.name}
+            </h2>
+            <p className="text-lg mt-2 text-center">
+              Características Principales:
+            </p>
+            <ul className="list-disc list-inside mt-2 text-lg ml-4">
               {helmet.features.map((feature, i) => (
                 <li key={i}>{feature}</li>
               ))}
             </ul>
             {helmet.accessories && (
-              <p className="mt-2">
+              <p className="mt-2 text-lg ml-4">
                 <strong>Accesorios Incluidos:</strong> {helmet.accessories}
               </p>
             )}
-            <p className="mt-2">
+            <p className="mt-2 text-lg ml-4">
               <strong>Estándares de Seguridad:</strong> {helmet.safetyStandards}
             </p>
           </li>
